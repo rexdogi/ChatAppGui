@@ -3,7 +3,9 @@ package sample.java.utils;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import sample.Main;
+import sample.java.controllers.MainController;
 
 import java.io.IOException;
 
@@ -14,13 +16,14 @@ public class MyNavigation {
 
     public void loadScene(String name) throws IOException {
         Parent res = FXMLLoader.load(getClass().getResource("../../resources/view/" + name + ".fxml"));
-        Scene scene = new Scene(res, 800, 600);
-        Main.getPrimaryStage().setScene(scene);
+        BorderPane borderPane = Main.getRoot();
+        System.out.println(borderPane == null);
+        borderPane.setCenter(res);
     }
 
-    public void loadScene(String name, int width, int height) throws IOException {
+   /* public void loadScene(String name, int width, int height) throws IOException {
         Parent res = FXMLLoader.load(getClass().getResource("../../resources/view/" + name + ".fxml"));
         Scene scene = new Scene(res, width, height);
         Main.getPrimaryStage().setScene(scene);
-    }
+    }*/
 }

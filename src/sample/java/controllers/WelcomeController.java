@@ -34,7 +34,7 @@ public class WelcomeController extends MyNavigation implements Initializable {
         });
         loginBtn.setOnAction(e -> {
             try {
-                loadScene("register");
+                loadScene("sample");
             } catch (IOException e1) {
                 e1.printStackTrace();
             }

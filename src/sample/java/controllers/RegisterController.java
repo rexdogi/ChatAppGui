@@ -18,12 +18,9 @@ import java.util.ResourceBundle;
  */
 public class RegisterController implements Initializable {
 
-    @FXML
-    TextField emailField;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        emailField.setPrefWidth(80);
     }
 
     public void loadMainScene() throws IOException {
