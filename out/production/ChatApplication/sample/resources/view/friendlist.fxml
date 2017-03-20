@@ -1,0 +1,35 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ListView?>
+
+<VBox fx:id="leftVBox" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.java.controllers.FriendListController">
+    <padding>
+        <Insets bottom="0" left="10" right="10" top="10" />
+    </padding>
+    <children>
+        <Label text="User" />
+        <Label opacity="0.03" text="Online">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets></Label>
+
+        <Label prefHeight="17.0" prefWidth="100.0" text="Friend list" />
+        <TextField fx:id="searchField" text="Search" />
+        <ScrollPane fx:id="myListScrollPane" prefHeight="200.0" prefWidth="200.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <ListView fx:id="myListView" layoutY="-6.0" prefHeight="200.0" prefWidth="200.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+    <opaqueInsets>
+        <Insets left="10.0" />
+    </opaqueInsets>
+</VBox>
