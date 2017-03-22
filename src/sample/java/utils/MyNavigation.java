@@ -16,14 +16,13 @@ public class MyNavigation {
 
     public void loadScene(String name) throws IOException {
         Parent res = FXMLLoader.load(getClass().getResource("../../resources/view/" + name + ".fxml"));
-        BorderPane borderPane = Main.getRoot();
-        System.out.println(borderPane == null);
-        borderPane.setCenter(res);
+        Scene scene = new Scene(res);
+        Main.getPrimaryStage().setScene(scene);
     }
 
-   /* public void loadScene(String name, int width, int height) throws IOException {
+    public void loadScene(String name, int width, int height) throws IOException {
         Parent res = FXMLLoader.load(getClass().getResource("../../resources/view/" + name + ".fxml"));
         Scene scene = new Scene(res, width, height);
         Main.getPrimaryStage().setScene(scene);
-    }*/
+    }
 }
