@@ -1,16 +1,21 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class Main extends Application {
 
 
-    public static Stage primaryStage;
+    private static Stage primaryStage;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -21,6 +26,8 @@ public class Main extends Application {
         welcomeScene.getStylesheets().add("sample/resources/css/layoutstyles.css");
         primaryStage.setScene(welcomeScene);
         primaryStage.show();
+        primaryStage.setOnCloseRequest(we -> System.out.println("Aplikacija isjungta"));
+
     }
 
     public static Stage getPrimaryStage() {

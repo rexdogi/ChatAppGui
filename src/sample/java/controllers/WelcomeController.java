@@ -5,12 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import sample.Main;
 import sample.java.utils.MyNavigation;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
@@ -23,18 +26,19 @@ public class WelcomeController extends MyNavigation implements Initializable {
     @FXML
     Button registerBtn;
 
+    private Alert alert = new Alert(Alert.AlertType.ERROR);
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        registerBtn.setOnAction(e -> {
-            try {
-                loadScene("register");
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-        });
+        alert.setTitle("Register");
+        String s = "Registracija laikinai neveikia";
+        alert.setContentText(s);
+
+        registerBtn.setOnAction(e -> alert.showAndWait());
         loginBtn.setOnAction(e -> {
             try {
-                loadScene("main");
+                loadScene("main", 600, 600);
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
