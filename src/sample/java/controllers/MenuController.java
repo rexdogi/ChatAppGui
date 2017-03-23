@@ -14,6 +14,7 @@ import javafx.stage.FileChooser;
 import sample.Main;
 import sample.java.utils.MyNavigation;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
@@ -49,7 +50,12 @@ public class MenuController extends MyNavigation implements Initializable {
         }
         aboutBtn.setOnAction(e -> initAbout());
         helpBtn.setOnAction(e -> initHelp());
-        fileChooser.setOnAction(e -> fileChooserControl.showOpenDialog(Main.getPrimaryStage()));
+        fileChooser.setOnAction(e ->  {
+            File file = fileChooserControl.showOpenDialog(Main.getPrimaryStage());
+            alert.setTitle("Failas");
+            alert.setContentText("Pasirinktas failas " + file.getName());
+            alert.showAndWait();
+        });
         colorCheckBox.setOnAction(e -> {
             System.out.println("clicked");
             if(colorCheckBox.isSelected()) {

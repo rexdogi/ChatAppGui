@@ -1,3 +1,9 @@
 .pane {
     height: 100%;
 }
+
+
+.bgColor {
+    -fx-font: 15px Tahoma;
+    -fx-background-image: url("background.jpg");
+}

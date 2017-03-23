@@ -4,5 +4,6 @@
 
 
 .bgColor {
-    -fx-background-color: red;
+    -fx-font: 15px Tahoma;
+    -fx-background-image: url("background.jpg");
 }
