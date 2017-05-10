@@ -80,8 +80,7 @@ public class MenuController extends MyNavigation implements Initializable {
     public void initHelp() {
         alert.setTitle("Help");
         String s = "Programa valdoma, pasirenkant asmeny iš 'Friend list', " +
-                "toliau dešinėje esančiame lange galite rašyti žinutes šiam asmeniui. " +
-                "Norint rašinėtis reikia būti prisiregistravusiam ir prisijungusiam, šiuo metu šios funkcijos nėra. \n" +
+                "toliau dešinėje esančiame lange galite rašyti žinutes šiam asmeniui. \n" +
                 "------------------------------------ \n" +
                 "Shift + h - atidaro help langą \n" +
                 "Shift + a - atidaro about langą";
